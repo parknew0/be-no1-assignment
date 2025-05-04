@@ -35,4 +35,12 @@ public class ArithmeticCalculator<T extends Number> {
             results.remove(0);
         }
     }
+
+    public void printResultsOver(double threshold) {
+        System.out.println(threshold + " 이상인 결과들:");
+        results.stream()
+                .filter(r -> r >= threshold)
+                .forEach(System.out::println);
+    }
+
 }

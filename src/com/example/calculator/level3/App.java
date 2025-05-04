@@ -28,9 +28,9 @@ public class App {
             System.out.println(result);
         }
 
-        System.out.println("100 이상인 결과들:");
-        calculator.getResults().stream()
-                .filter(r -> r >= 100)
-                .forEach(System.out::println);
+        System.out.println("현재 입력값보다 큰 결과값들을 출력합니다");
+        System.out.print("입력 : ");
+        double num = Double.parseDouble(br.readLine());
+        calculator.printResultsOver(num);
     }
 }
