@@ -10,6 +10,7 @@ public class App {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         CalculatorLV2 calculator = new CalculatorLV2();
         String input;
+        System.out.println("예: 1+1 처럼 연산식 전체를 한 줄로 입력하세요. (종료하려면 'exit' 입력)");
 
         while(!(input = br.readLine()).equals("exit")) {
             input = input.replaceAll(" ", "");
@@ -27,9 +28,10 @@ public class App {
             int result = calculator.calculate(a, b, operator);
 
             System.out.println(result);
+            System.out.println("예: 1+1 처럼 연산식 전체를 한 줄로 입력하세요. (종료하려면 'exit' 입력)");
         }
 
-        calculator.removeResult();
+        calculator.removeResult(); // 제일 첫 결과를 결과 리스트에서 제거한다.
         System.out.println(calculator.getResults());
     }
 }

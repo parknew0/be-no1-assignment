@@ -9,6 +9,7 @@ public class App {
         ArithmeticCalculator<Double> calculator = new ArithmeticCalculator<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input;
+        System.out.println("예: 1+1 처럼 연산식 전체를 한 줄로 입력하세요. (종료하려면 'exit' 입력)");
 
         while(!(input = br.readLine()).equals("exit")) {
             input = input.replaceAll(" ", "");
@@ -26,6 +27,7 @@ public class App {
             double result = calculator.calculate(a, b, opType);
 
             System.out.println(result);
+            System.out.println("예: 1+1 처럼 연산식 전체를 한 줄로 입력하세요. (종료하려면 'exit' 입력)");
         }
 
         System.out.println("현재 입력값보다 큰 결과값들을 출력합니다");

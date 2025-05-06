@@ -6,6 +6,7 @@ public class CalculatorLV1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input;
+        System.out.println("예: 1+1 처럼 연산식 전체를 한 줄로 입력하세요. (종료하려면 'exit' 입력)");
 
         while (!(input = scanner.next()).equals("exit")) {
             int a = input.charAt(0) - '0';
@@ -31,6 +32,7 @@ public class CalculatorLV1 {
             } else {
                 System.out.println(result);
             }
+            System.out.println("예: 1+1 처럼 연산식 전체를 한 줄로 입력하세요. (종료하려면 'exit' 입력)");
         }
 
         scanner.close();
